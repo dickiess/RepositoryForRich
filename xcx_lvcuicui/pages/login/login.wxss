@@ -1,0 +1,104 @@
+/* pages/login/login.wxss */
+
+page {
+  background-color: #f6f6f6;
+}
+
+/**  背景图  **/
+
+.background-image {
+  z-index: -99;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image image {
+  width: 100%;
+  height: 100%;
+}
+
+/**  LOGO  **/
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 302rpx;
+  height: 130rpx;
+  margin: 50rpx;
+  margin-top: 55px;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+/**  交互部分  **/
+
+.input-group {
+  margin: 55px auto;
+  width: 100%;
+}
+
+/**  输入框  **/
+
+.input-line {
+  background-color: white;
+  border-width: 1px;
+  border-color: #e0e0e0;
+  margin-top: 1px;
+}
+
+.input-number {
+  margin: 0 auto;
+  width: 230px;
+  height: 48px;
+  font-size: 14px;
+  /* background-color: yellow; */
+}
+
+.input-box {
+  margin: 0 auto;
+  width: 230px;
+  height: 48px;
+  /* background-color: orange; */
+}
+
+.input-code {
+  display: inline-block;
+  width: 110px;
+  height: 48px;
+  font-size: 14px;
+  /* background-color: yellow; */
+}
+
+/**  按钮  **/
+
+.btn-code {
+  display: inline-block;
+  margin-left: 20px;
+  margin-bottom: 4px;
+  background-color: #28a7e1;
+  width: 100px;
+  height: 32px;
+  font-size: 14px;
+  color: white;
+}
+
+.btn-login {
+  background-color: blue;
+  margin-top: 22px;
+  background-color: #0d6fb8;
+  width: 220px;
+  height: 42px;
+  font-size: 16px;
+  color: white;
+}

@@ -1,0 +1,22 @@
+<!--pages/login/login.wxml-->
+
+<view class="container">
+  <view bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="/icon/icon_lvcuicui.png" background-size="cover"></image>
+  </view>
+  <view class="input-group">
+    <view class="input-line">
+      <input class="input-number" type="digit" bindinput="bindInputNumber" placeholder="请输入您的手机号码"></input>
+    </view>
+    <view class="input-line">
+      <view class="input-box">
+        <input class="input-code" type="digit" bindinput="bindInputCode" placeholder="短信验证码"></input>
+        <button class="btn-code" bindtap="btnForCode">{{codeBtnTitle}}</button>
+      </view>
+    </view>
+    <button class="btn-login" bindtap="btnForLogin">用户登录 / 自动注册</button>
+  </view>
+</view>
+<view>
+  <loading wx:if="{{showLoading}}">加载中</loading>
+</view>
