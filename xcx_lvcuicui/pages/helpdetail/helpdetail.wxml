@@ -1,0 +1,26 @@
+<!--pages/helpdetail/helpdetail.wxml-->
+
+<view class="container">
+  <view class="container-body container-gray" style="display:block">
+    <view class="group">
+      <view class="group-header">求助内容</view>
+      <view class="group-body service-detail">
+        <text>阿拉劳斯莱斯等放假啦开始的房间里的风景路上的风景啦</text>
+      </view>
+      <view class="input-list">
+        <view class="input-item">
+          <text class="input-item-label">用户总量</text>
+          <view class="input-item-content">
+            <input type="number"></input>
+          </view>
+        </view>
+        <view class="input-item">
+          <text class="input-item-label">用户总量</text>
+          <view class="input-item-content">
+            <input type="number"></input>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

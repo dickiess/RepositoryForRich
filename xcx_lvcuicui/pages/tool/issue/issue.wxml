@@ -1,0 +1,2 @@
+<!--pages/tool/issue/issue.wxml-->
+<web-view src="{{url}}"></web-view>

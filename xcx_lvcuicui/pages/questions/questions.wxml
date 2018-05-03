@@ -1,0 +1,48 @@
+<!--pages/questions/questions.wxml-->
+
+<view class="container">
+  <view class="filter-flex">
+    <view class="filter-tab">
+      <text bindtap="setFilterPanel" data-findex="1" class="{{showfilterindex==1?'active':''}}">案件分类</text>
+      <text bindtap="setFilterPanel" data-findex="2" class="{{showfilterindex==2?'active':''}}">涉案金额</text>
+      <text bindtap="setFilterPanel" data-findex="3" class="{{showfilterindex==3?'active':''}}">所在城市</text>
+    </view>
+    <view class="filter-content" wx:if="{{showfilter}}">
+      <!-- 案件分类 -->
+      <view class="filter-panel filter-sort" wx:if="{{showfilterindex==1}}">
+        <view wx:for="{{filterdata.type}}" wx:key="{{item.id}}" bindtap="setType" data-typeindex="{{index}}" data-typeid="{{item.id}}" class="{{typeindex==index?'active':''}}">{{item.title}}</view>
+      </view>
+    </view>
+    <!-- 涉案金额 -->
+    <view class="filter-panel filter-sort" wx:if="{{showfilterindex==2}}">
+      <view wx:for="{{filterdata.money}}" wx:key="{{item.id}}" bindtap="setMoney" data-moneyindex="{{index}}" data-moneyid="{{item.id}}" class="{{moneyindex==index?'active':''}}">{{item.title}}</view>
+    </view>
+    <!-- 所在城市 -->
+    <view class="filter-panel" wx:if="{{showfilterindex==3}}">
+      <view class="filter-panel-left">
+        <view wx:for="{{filterdata.city}}" wx:key="{{item.id}}" bindtap="setCityIndex" data-cityindex="{{index}}" data-cityid="{{item.id}}" class="{{cityindex==index?'active':''}}">{{item.title}}</view>
+      </view>
+      <view class="filter-panel-right">
+        <view wx:for="{{filterdata.city[cityindex].subcity}}" wx:key="{{item.id}}" bindtap="setSubcityIndex" data-subcityindex="{{index}}" data-subcityid="{{item.id}}" class="{{subcityindex==index?'active':''}}">{{item.title}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="filter-shadow" wx:if="{{showfilter}}" bindtap="hideFilter"></view>
+  <!-- 内容列表 -->
+  <scroll-view class="container-body" scroll-y="true" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50" bindscrolltolower="scrollLoading">
+    <view class="service-list">
+      <navigator class="service-item" wx:for="{{servicelist}}" wx:key="{{item.id}}" url="../servicedetail/servicedetail?id={{item.id}}">
+        <view class="service-text">
+          <view class="service-tags"><text>{{item.tag}}</text></view>
+          <view class="service-chat"><image src="{{item.imgurl}}"></image></view>
+          <view class="service-time">{{item.time}}</view>
+          <view class="service-title">{{item.title}}</view>
+          <view class='service-line'></view>
+          <text class="service-subtitle">{{item.subtitle}}</text>
+          <text class="service-arrow">查看详情</text>
+        </view>
+      </navigator>
+    </view>
+    <view class="gototop{{scrolltop>200?'active':''}}" bindtap="goToTop"></view>
+  </scroll-view>
+</view>

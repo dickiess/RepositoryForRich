@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper class="index-banner" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{4000}}" duration="{{1000}}" circular="true">
+    <block wx:for="{{imgUrls}}" wx:key="itme.url">
+      <swiper-item>
+        <image src="{{item.url}}" mode="aspectFill" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="index-menu">
+    <navigator class="index-menu-item" wx:for="{{indexmenu}}" wx:key="{{item.url}}" url="../{{item.url}}/{{item.url}}">
+      <image src="{{item.icon}}"></image>
+      <text>{{item.text}}</text>
+    </navigator>
+  </view>
+</view>
+<view >
+    <loading wx:if="{{showLoading}}">加载中</loading>
+</view>

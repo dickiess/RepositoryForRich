@@ -1,0 +1,10 @@
+<!-- pages/tool/tool.wxml -->
+
+<view class="container">
+  <view class="tool-list">
+    <view class="group-header">资费计算</view>
+    <navigator class="tool-item" wx:for="{{toollist}}" wx:key="{{item.id}}" url="{{item.url}}">
+      <image src="{{item.imgUrl}}" mode="aspectFit" /> {{item.title}}
+    </navigator>
+  </view>
+</view>

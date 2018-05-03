@@ -1,0 +1,53 @@
+<!--pages/tool/tool_2.wxml-->
+
+<view class="container">
+  <view class="container-body container-gray" style="display:block">
+    <view class="group">
+      <view class="group-header">基本信息</view>
+      <!-- 条件输入 -->
+      <view class="group-body">
+        <view class="input-list">
+          <!-- 类型 -->
+          <view class="input-item">
+            <text class="input-item-label">案件类型</text>
+            <view class="input-item-content">
+              <picker bindchange="onPickerCatelog" value="{{catelogindex}}" range="{{catelogArray}}">
+                <input type="text" placeholder="点击选择分类" value='{{catelogName}}' disabled='true'></input>
+              </picker>
+            </view>
+          </view>
+          <!-- 财产 -->
+          <view class="input-item">
+            <text class="input-item-label">涉及财产</text>
+            <view class="input-item-content">
+              <picker bindchange="onPickerFortrun" value="{{fortrunindex}}" range="{{fortrunArray}}">
+                <input type="text" placeholder="点击选择财产" bindfocus="setFortrun" value='{{fortrunYes}}' disabled='true'></input>
+              </picker>
+            </view>
+          </view>
+          <!-- 金额 -->
+          <view class="input-item">
+            <text class="input-item-label">案件金额</text>
+            <view class="input-item-content">
+              <input type="text" placeholder="输入诉讼金额" type="Number" bindinput="onMoneyInput" value='{{moneyNumber}}'></input>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="btn-submit">
+      <button class="btn-block btn-gray" bindtap="tapForReset">重置</button>
+      <view style='margin:30rpx;'></view>
+      <button class="btn-block btn-blue" bindtap="tapForSubmit">确认提交</button>
+    </view>
+    <view class="result" wx:if="{{showResult==1}}">
+      <text>参考资费\n</text>
+      <text>{{moneyRange}}</text>
+    </view>
+    <view class="accord" wx:if="{{showResult==1}}">
+      依据
+      <text bindtap="tapForRead">《诉讼费用交纳办法》</text>文件计算, 结果仅供参考。
+    </view>
+  </view>
+  <view class="filter-shadow" wx:if="{{showFilter==1}}" bindtap="hideFilter"></view>
+</view>

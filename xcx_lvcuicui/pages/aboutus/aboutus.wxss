@@ -1,0 +1,22 @@
+/* aboutus.wxss */
+
+.about {
+  margin: 0rpx;
+  margin-top: -150rpx;
+  background-color: black;
+}
+
+.about image {
+  width: 750rpx;
+  height: 1334rpx;
+}
+
+.company {
+  margin-top: -50rpx;
+  margin-bottom: 32rpx;
+  text-align: center;
+}
+
+.company text {
+  color: white;
+}

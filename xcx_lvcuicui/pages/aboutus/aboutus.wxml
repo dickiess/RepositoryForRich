@@ -1,0 +1,7 @@
+<!--aboutus.wxml-->
+<view class="about">
+  <image src="{{fullScreenUrl}}"></image>
+  <view class="company">
+    <text>上海找律师信息科技有限公司</text>
+  </view>
+</view>

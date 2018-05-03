@@ -1,0 +1,23 @@
+/* pages/tool/tool.wxss */
+
+.container {
+  background: #f9f9f9;
+}
+
+.tool-list {
+  background: white;
+}
+
+.tool-item {
+  border-bottom: 1rpx solid #ddd;
+  padding: 20rpx;
+  font-size: 32rpx;
+  background: #fff url('../../images/xiangyou1.png') no-repeat 98% 50% / auto 36rpx;
+}
+
+.tool-item image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+  vertical-align: -6rpx;
+}

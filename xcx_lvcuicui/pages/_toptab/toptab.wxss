@@ -1,0 +1,84 @@
+/* pages/_toptab/toptab.wxss */
+
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navbar {
+  flex: none;
+  display: flex;
+  background: #fff;
+}
+
+.navbar .item {
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.navbar .item.active {
+  color: #f7982a;
+}
+
+.navbar .item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6rpx;
+  background: #f7982a;
+}
+
+.group-header {
+  text-indent: 26rpx;
+}
+
+.filter-sort {
+  display: block;
+  background: #fff;
+}
+
+.filter-sort view {
+  flex: 1;
+  line-height: 80rpx;
+  /* text-indent: 60rpx; */
+  max-height: 432rpx;
+  overflow-y: auto;
+  border-bottom: 1rpx solid #e8e8e8;
+  text-align: center;
+}
+
+.filter-sort view.active {
+  color: #f7982a;
+}
+
+.input-item {
+  background: #fff;
+  border-top: 1rpx solid #ddd;
+  text-indent: 5rpx;
+}
+
+.btn-submit {
+  margin-top: 50rpx;
+}
+
+.question-text {
+  padding: 20rpx;
+  text-align: center;
+}
+
+.question-text text {
+  display: block;
+  color: #888;
+  font-size: 28rpx;
+}
+
+.question-text view {
+  font-size: 48rpx;
+  color: #f7982a;
+}
