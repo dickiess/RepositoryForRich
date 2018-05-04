@@ -14,9 +14,7 @@ Page({
     showLoading: false,
   },
 
-  // 生命周期函数--监听页面加载 
   onLoad: function () {
-
     this.fetchData();
     var that = this;
     // 调用应用实例的方法获取全局数据

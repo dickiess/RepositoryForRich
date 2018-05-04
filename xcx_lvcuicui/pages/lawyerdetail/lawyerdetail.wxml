@@ -1,2 +1,16 @@
 <!--pages/lawyerdetail/lawyerdetail.wxml-->
-<text>pages/lawyerdetail/lawyerdetail.wxml</text>
+
+<view class="container">
+  <scroll-view class="container-body" scroll-y="true" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50" bindscrolltolower="scrollLoading">
+    <view class="d-list">
+      <navigator class="d-item" wx:for="{{details}}">
+        <view class="d-text">
+          <view class="d-left">{{item.title}}</view>
+          <view class="d-right">
+            <text>{{item.content}}</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </scroll-view>
+</view>

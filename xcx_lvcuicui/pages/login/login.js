@@ -103,10 +103,9 @@ Page({
     }
 
     // 跳转到律师详情页
-    wx.navigateTo({
-      url: '../lawyerdetail/lawyerdetail'
+    wx.redirectTo({
+      url: '../lawyerdetail/lawyerdetail',
     })
-
   },
 
 })
