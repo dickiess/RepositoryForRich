@@ -1,22 +1,35 @@
 <!--pages/login/login.wxml-->
 
 <view class="container">
+  <!-- LOGO  -->
   <view bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="/icon/icon_lvcuicui.png" background-size="cover"></image>
   </view>
+  <!-- 输入框 -->
   <view class="input-group">
     <view class="input-line">
-      <input class="input-number" type="digit" bindinput="bindInputNumber" placeholder="请输入您的手机号码"></input>
+      <input class="input-number" type="digit" bindinput="onInputNumber" placeholder="请输入您的手机号码" value="{{mobileNum}}"></input>
     </view>
     <view class="input-line">
       <view class="input-box">
-        <input class="input-code" type="digit" bindinput="bindInputCode" placeholder="短信验证码"></input>
-        <button class="btn-code" bindtap="btnForCode">{{codeBtnTitle}}</button>
+        <input class="input-code" type="digit" bindinput="onInputCode" placeholder="短信验证码" value="{{passCode}}" password="true"></input>
+        <button class="btn-code" bindtap="tapForCode">{{codeBtnTitle}}</button>
       </view>
     </view>
-    <button class="btn-login" bindtap="btnForLogin">用户登录 / 自动注册</button>
+    <!-- 服务协议 -->
+    <view class="agreement">
+      <checkbox-group bindchange="tapForCheck">
+        <label>
+          <checkbox value="true" checked="true">我已经阅读并同意</checkbox>
+        </label>
+      </checkbox-group>
+      <label class="agreement-label" bindtap="tapForAgreement">《律师服务协议》</label>
+    </view>
+    <!-- 提交按钮 -->
+    <button class="btn-login" disabled="{{!checked}}" bindtap="tapForLogin">律师登录 / 新用户注册</button>
   </view>
 </view>
+<!-- 加载中 -->
 <view>
   <loading wx:if="{{showLoading}}">加载中</loading>
 </view>

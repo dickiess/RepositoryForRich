@@ -322,6 +322,15 @@ function get_help_dictionary_array() {
   return new_array;
 }
 
+function show_warning_message(t, c) {
+  wx.showModal({
+    title: t,
+    content: c,
+    showCancel: false
+  })
+}
+
+
 /*----------------------------------------------------------------------------------*/
 
 // 接口函数
@@ -338,4 +347,5 @@ module.exports = {
   getHelpArray:       get_help_array,
   getHelpColor:       get_help_color,
   getHelpName:        get_help_name,
+  warning:            show_warning_message,
 }

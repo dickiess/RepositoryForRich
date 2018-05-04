@@ -81,11 +81,20 @@ function get_time() {
   return format_time(dd)
 }
 
+// 手机号码验证
+function check_mobile_number(n) {
+  if (/^1[3|4|5|8][0-9]\d{4,8}$/.test(n)) {
+    return true;
+  }
+  return false;
+}
+
 /*----------------------------------------------------------------------------------*/
 
 module.exports = {
   repayDate: repayDate,
   getDateByDouble: get_date_by_double,
   formatTime: format_time,
-  getTime: get_time, 
+  getTime: get_time,
+  checkMobile: check_mobile_number, 
 }

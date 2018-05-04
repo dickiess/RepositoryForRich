@@ -28,7 +28,9 @@
     "pages/main/main",
     "pages/addCur/addCur",
     "pages/test/test",
-    "pages/toptab/toptab"
+    "pages/toptab/toptab",
+    "pages/agreement/agreement",
+    "pages/lawyerdetail/lawyerdetail"
   ],
   "window": {
     "backgroundTextStyle": "white",
